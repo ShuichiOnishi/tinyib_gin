@@ -1,0 +1,876 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: trevor@rocketnine.space\n"
+"POT-Creation-Date: 2023-01-05 10:20-0800\n"
+"PO-Revision-Date: 2022-12-18 03:51+0000\n"
+"Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/tinyib/tinyib/"
+"id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15.1-dev\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: imgboard.php\n"
+"X-Poedit-SearchPath-1: inc/functions.php\n"
+"X-Poedit-SearchPath-2: inc/html.php\n"
+
+msgid "Click here to go back"
+msgstr "Klik ini untuk kembali"
+
+msgid "TINYIB_HCAPTCHA_SITE and TINYIB_HCAPTCHA_SECRET  must be configured."
+msgstr ""
+"Pengaturan TINYIB_HCAPTCHA_SITE dan TINYIB_HCAPTCHA_SECRET  harus diisi."
+
+msgid "TINYIB_RECAPTCHA_SITE and TINYIB_RECAPTCHA_SECRET  must be configured."
+msgstr ""
+"Pengaturan TINYIB_RECAPTCHA_SITE dan TINYIB_RECAPTCHA_SECRET  harus diisi."
+
+msgid "TINYIB_TRIPSEED must be configured."
+msgstr "Pengaturan TINYIB_TRIPSEED wajib diisi."
+
+msgid "Unknown database mode specified."
+msgstr "Mode database tidak ditemukan atau tidak tersedia."
+
+#, php-format
+msgid "Directory '%s' can not be written to.  Please modify its permissions."
+msgstr ""
+"Direktori '%s' tidak dapat ditulis.  Harap ubah izin direktori tersebut "
+"menjadi tertulis (write access permission)."
+
+msgid "Posting is currently disabled.<br>Please try again in a few moments."
+msgstr ""
+"Posting saat ini dinonaktifkan.<br>Silakan coba lagi dalam beberapa saat "
+"lagi."
+
+msgid "Invalid parent thread ID supplied, unable to create post."
+msgstr "ID thread induk yang diberikan tidak valid, tidak dapat membuat post."
+
+msgid "Replies are not allowed to locked threads."
+msgstr "Post balasan pada thread yang dikunci tidak diizinkan."
+
+msgid "Your post contains a blocked keyword."
+msgstr "Posting Anda berisikan kata kunci yang diblokir."
+
+msgid "Keyword"
+msgstr "Kata kunci"
+
+#, php-format
+msgid "Your IP address (%1$s) is banned until %2$s."
+msgstr "Alamat IP anda (%1$s) diblokir sampai %2$s."
+
+#, php-format
+msgid "Your IP address (%s) is permanently banned."
+msgstr "Alamat IP Anda (%s) diblokir permanen."
+
+msgid "Reason"
+msgstr "Alasan"
+
+msgid "Embedding a URL and uploading a file at the same time is not supported."
+msgstr ""
+"Operasi menyematkan URL dan mengunggah file pada waktu yang sama tidak "
+"didukung."
+
+#, php-format
+msgid "Invalid embed URL. Only %s URLs are supported."
+msgstr "URL sematan tidak valid. Hanya URL %s yang didukung."
+
+#, php-format
+msgid "That file is larger than %s."
+msgstr "File yang diunggah lebih besar dari %s."
+
+msgid "Failed to download file at specified URL."
+msgstr "Gagal mengunduh file pada URL yang rujuk."
+
+msgid "Error while processing audio/video."
+msgstr "Terjadi kesalahan pada pemrosesan audio/video."
+
+msgid "Could not create thumbnail."
+msgstr "Tidak dapat membuat thumbnail."
+
+msgid "upload a file or embed a URL"
+msgstr "unggah file atau sematkan URL"
+
+msgid "upload a file"
+msgstr "unggah file"
+
+msgid "embed a URL"
+msgstr "sematkan URL"
+
+#, php-format
+msgid "Please %s to start a new thread."
+msgstr "Harap %s untuk memulai thread baru."
+
+#, php-format
+msgid "Please enter a message and/or %s."
+msgstr "Harap masukkan pesan dan/atau %s."
+
+msgid "Please enter a message."
+msgstr "Harap masukkan pesan."
+
+#, php-format
+msgid "Please %s."
+msgstr "Harap %s."
+
+#, php-format
+msgid "Your %s will be shown <b>once it has been approved</b>."
+msgstr "%s Anda akan ditampilkan <b>jika disetujui</b>."
+
+msgid "Updating thread..."
+msgstr "Memperbarui thread..."
+
+msgid "Updating index..."
+msgstr "Memperbarui index..."
+
+msgid "Created staff post"
+msgstr "Membuat postingan staf"
+
+msgid "This post has been deleted"
+msgstr "Postingan ini telah dihapus"
+
+msgid "This post requires moderation before it can be displayed"
+msgstr "Postingan ini memerlukan moderasi sebelum bisa ditampilkan"
+
+msgid "Automatic refreshing is disabled."
+msgstr "Refresh halaman otomatis dinonaktifkan."
+
+msgid "Reporting is disabled."
+msgstr "Pelaporan dinonaktifkan."
+
+msgid ""
+"Sorry, an invalid post identifier was sent. Please go back, refresh the "
+"page, and try again."
+msgstr ""
+"Maaf, identifier post yang dirujuk tidak valid. Harap kembali, refresh "
+"halaman, dan coba lagi."
+
+msgid "Moderators have determined that post does not break any rules."
+msgstr ""
+"Moderator telah menetapkan bahwa postingan tersebut tidak melanggar aturan "
+"apa pun."
+
+msgid "You have already submitted a report for that post."
+msgstr "Anda telah mengirimkan laporan untuk posting itu."
+
+msgid "(enter the text below)"
+msgstr "(masukkan teks di bawah ini)"
+
+msgid "Please complete a CAPTCHA to submit your report"
+msgstr "Harap lengkapi CAPTCHA untuk mengirimkan laporan Anda"
+
+msgid "Submit"
+msgstr "Kirim"
+
+msgid "Post reported."
+msgstr "Postingan telah dilaporkan."
+
+msgid "Tick the box next to a post and click \"Delete\" to delete it."
+msgstr "Centang kotak di samping postingan dan klik \"Hapus\" untuk menghapus."
+
+msgid ""
+"Post deletion is currently disabled.<br>Please try again in a few moments."
+msgstr ""
+"Penghapusan postingan saat ini dinonaktifkan.<br>Silakan coba lagi dalam "
+"beberapa saat."
+
+msgid "Post deleted."
+msgstr "Postingan dihapus."
+
+msgid "Invalid password."
+msgstr "Kata sandi salah."
+
+msgid "Rebuilt board."
+msgstr "<i>Rebuilt</i> board."
+
+msgid "Access denied"
+msgstr "Akses ditolak"
+
+msgid "Account not found."
+msgstr "Akun tidak ditemukan."
+
+msgid "This account may not be updated while TINYIB_ADMINPASS is set."
+msgstr "Akun ini tidak dapat diperbarui selama TINYIB_ADMINPASS diset."
+
+msgid "This account may not be updated while TINYIB_MODPASS is set."
+msgstr "Akun ini tidak dapat diperbarui selama TINYIB_MODPASS diset."
+
+msgid "A password is required."
+msgstr "Kata sandi diperlukan."
+
+msgid "Invalid role."
+msgstr "Peran tidak valid."
+
+#, php-format
+msgid "Added account %s"
+msgstr "Membuat akun %s"
+
+msgid "Added account"
+msgstr "Akun dibuat"
+
+#, php-format
+msgid "Renamed account %1$s as %2$s"
+msgstr "Mengganti nama akun %1$s menjadi %2$s"
+
+#, php-format
+msgid "Changed password of account %s"
+msgstr "Mengubah kata sandi akun %s"
+
+msgid "Super-administrator"
+msgstr "Super-administrator"
+
+msgid "Administrator"
+msgstr "Administrator"
+
+msgid "Moderator"
+msgstr "Moderator"
+
+msgid "Disabled"
+msgstr "Dinonaktifkan"
+
+#, php-format
+msgid "Changed role of account %s to %s"
+msgstr "Mengubah role akun %s menjadi %s"
+
+msgid "Updated account"
+msgstr "Akun diperbarui"
+
+msgid "permanently"
+msgstr "permanen"
+
+#, php-format
+msgid "until %s"
+msgstr "sampai %s"
+
+#, php-format
+msgid "Banned %s %s"
+msgstr "Alamat IP %s diblokir %s"
+
+#, php-format
+msgid "Banned %s %s: %s"
+msgstr "Alamat IP %s diblokir %s: %s"
+
+#, php-format
+msgid "Added ban message to %s"
+msgstr "Pesan blokiran ke %s dibuat"
+
+msgid "Banned 1 IP address"
+msgstr "1 alamat IP diblokir"
+
+#, php-format
+msgid "Banned %d IP addresses"
+msgstr "%d alamat IP diblokir"
+
+#, php-format
+msgid "Lifted ban on %s"
+msgstr "Blokir pada %s dicabut"
+
+msgid "Sorry, that keyword has already been added."
+msgstr "Maaf, kata kunci itu sudah ditambahkan."
+
+#, php-format
+msgid "Updated keyword %s"
+msgstr "Perbarui kata kunci %s"
+
+msgid "Keyword updated."
+msgstr "Kata kunci diperbarui."
+
+msgid "Keyword added."
+msgstr "Kata kunci ditambahkan."
+
+msgid "That keyword does not exist."
+msgstr "Kata kunci disebut tidak ditemukan."
+
+#, php-format
+msgid "Deleted keyword %s"
+msgstr "Hapus kata kunci %s"
+
+msgid "Keyword deleted."
+msgstr "Kata kunci dihapus."
+
+#, php-format
+msgid "Deleted %s"
+msgstr "Hapus %s"
+
+msgid "Deleted 1 post"
+msgstr "1 posting dihapus"
+
+#, php-format
+msgid "Deleted %d posts"
+msgstr "%d posting dihapus"
+
+msgid "Approved"
+msgstr "Disetujui"
+
+#, php-format
+msgid "Post No.%d approved."
+msgstr "Postingan No.%d disetujui."
+
+msgid "Sorry, there doesn't appear to be a post with that ID."
+msgstr ""
+"Maaf, tampaknya postingan dengan ID tersebut tidak ada atau tidak ditemukan."
+
+msgid "Stickied"
+msgstr "Rekat"
+
+msgid "Unstickied"
+msgstr "Tidak rekat"
+
+msgid "Form data was lost. Please go back and try again."
+msgstr "Data formulir hilang. Silakan kembali dan coba lagi."
+
+msgid "Locked"
+msgstr "Dikunci"
+
+msgid "Unlocked"
+msgstr "Tidak dikunci"
+
+msgid "Passwords do not match."
+msgstr "Kata sandi tidak cocok."
+
+msgid "Password updated"
+msgstr "Kata sandi diperbarui"
+
+msgid "Please enter the CAPTCHA text."
+msgstr "Harap masukkan teks CAPTCHA."
+
+msgid ""
+"Incorrect CAPTCHA text entered.  Please try again.<br>Click the image to "
+"retrieve a new CAPTCHA."
+msgstr ""
+"Teks CAPTCHA yang dimasukkan salah. Harap coba lagi.<br>Klik gambar untuk "
+"memuat CAPTCHA baru."
+
+#, php-format
+msgid ""
+"Please shorten your message, or post it in multiple parts. Your message is "
+"%1$d characters long, and the maximum allowed is %2$d."
+msgstr ""
+"Harap persingkat pesan Anda, atau pecah posting jadi beberapa bagian. "
+"Panjang pesan anda adalah %1$d karakter, dan maksimum karakter yang "
+"diizinkan adalah %2$d."
+
+msgid "Invalid key."
+msgstr "Kunci login salah."
+
+msgid "Invalid username or password."
+msgstr "Username dan password salah."
+
+#, php-format
+msgid ""
+"The uploaded file exceeds the upload_max_filesize directive (%s) in php.ini."
+msgstr ""
+"File yang diunggah melebihi aturan upload_max_filesize (%s) di php.ini."
+
+msgid "The uploaded file was only partially uploaded."
+msgstr "File yang diunggah hanya diunggah sebagian."
+
+msgid "No file was uploaded."
+msgstr "Tidak ada file yang diunggah."
+
+msgid "Missing a temporary folder."
+msgstr "Directory sementara (temporary directory) tidak ditemukan."
+
+msgid "Failed to write file to disk"
+msgstr "Gagal menulis file ke diska"
+
+msgid "Unable to save the uploaded file."
+msgstr "Tidak dapat menyimpan file yang diunggah."
+
+#, php-format
+msgid ""
+"Duplicate file uploaded. That file has already been posted <a "
+"href=\"%s\">here</a>."
+msgstr ""
+"File unggahan duplikat. File tersebut telah diposting <a href=\"%s\">di "
+"sini</a>."
+
+msgid ""
+"Unable to read the uploaded file while creating its thumbnail. A common "
+"cause for this is an incorrect extension when the file is actually of a "
+"different type."
+msgstr ""
+"Gagal membuat thumbnail: file yang diunggah tidak dapat dibaca. Ini umumnya "
+"terjadi karena penamaan extensi file dengan jenis file berbeda atau salah."
+
+msgid "File transfer failure. Please retry the submission."
+msgstr ""
+
+msgid ""
+"Failed to read the MIME type and size of the uploaded file. Please retry the "
+"submission."
+msgstr ""
+
+msgid "Could not copy uploaded file."
+msgstr "Tidak dapat menyalin berkas yang diunggah."
+
+msgid "File transfer failure. Please go back and try again."
+msgstr ""
+
+msgid "Sorry, your video appears to be corrupt."
+msgstr ""
+
+#, php-format
+msgid "Supported file type is %s"
+msgstr ""
+
+#, php-format
+msgid "Supported file types are %1$s and %2$s."
+msgstr ""
+
+msgid "Raw HTML"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid ""
+"Text entered in the Message field will be posted as is with no formatting "
+"applied."
+msgstr ""
+
+msgid "Line-breaks must be specified with \"&lt;br&gt;\"."
+msgstr ""
+
+msgid "Reply to"
+msgstr "Membalas ke"
+
+msgid "0 to start a new thread"
+msgstr ""
+
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+#, php-format
+msgid "Maximum file size allowed is %s."
+msgstr ""
+
+msgid "File"
+msgstr "Berkas"
+
+msgid "Embed"
+msgstr ""
+
+msgid "(paste a YouTube URL)"
+msgstr "(tempel URL YouTube)"
+
+msgid "All posts are moderated before being shown."
+msgstr ""
+
+msgid "All posts with a file attached are moderated before being shown."
+msgstr ""
+
+#, php-format
+msgid "Images greater than %s will be thumbnailed."
+msgstr ""
+
+#, php-format
+msgid "Currently %s unique user posts."
+msgstr ""
+
+msgid "Name"
+msgstr "Nama"
+
+msgid "E-mail"
+msgstr "Surel"
+
+msgid "Subject"
+msgstr "Subjek"
+
+msgid "Message"
+msgstr "Pesan"
+
+msgid "Password"
+msgstr "Kata Sandi"
+
+msgid "(for post and file deletion)"
+msgstr ""
+
+msgid "Report"
+msgstr "Laporan"
+
+msgid "Reply"
+msgstr "Balasan"
+
+msgid "Post truncated. Click Reply to view."
+msgstr ""
+
+msgid "1 post omitted. Click Reply to view."
+msgstr ""
+
+#, php-format
+msgid "%d posts omitted. Click Reply to view."
+msgstr ""
+
+msgid "Catalog"
+msgstr "Katalog"
+
+msgid "Manage"
+msgstr "Kelola"
+
+msgid "Previous"
+msgstr "Sebelumnya"
+
+msgid "Next"
+msgstr "Selanjutnya"
+
+msgid "Return"
+msgstr "Kembali"
+
+msgid "Posting mode: Reply"
+msgstr ""
+
+msgid "Style"
+msgstr "Gaya"
+
+msgid "Delete"
+msgstr "Hapus"
+
+msgid "Delete Post"
+msgstr "Hapus pos"
+
+msgid "Accounts"
+msgstr "Akun"
+
+msgid "Bans"
+msgstr ""
+
+msgid "Keywords"
+msgstr "Kata Kunci"
+
+msgid "Migrate Database"
+msgstr "Migrasi Basis Data"
+
+msgid "Moderate Post"
+msgstr ""
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Rebuild All"
+msgstr ""
+
+msgid "Reports"
+msgstr "Laporan"
+
+msgid "Staff Post"
+msgstr ""
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Update"
+msgstr "Perbarui"
+
+msgid "Change Password"
+msgstr "Ubah Kata Sandi"
+
+msgid "Log Out"
+msgstr "Keluar"
+
+msgid "Manage mode"
+msgstr "Mode kelola"
+
+msgid "Log In"
+msgstr "Masuk"
+
+msgid "Enter a username and password"
+msgstr "Masukkan nama pengguna dan kata sandi"
+
+msgid "No logs."
+msgstr "Tidak ada log."
+
+msgid "Moderation log"
+msgstr "Log moderasi"
+
+msgid "Reported posts"
+msgstr "Pos yang dilaporkan"
+
+#, php-format
+msgid "%1$d report by %2$s"
+msgstr ""
+
+#, php-format
+msgid "%1$d reports by %2$s"
+msgstr ""
+
+#, php-format
+msgid "%d reports"
+msgstr "%d laporan"
+
+#, php-format
+msgid "Reported by %s"
+msgstr "Dilaporkan oleh %s"
+
+msgid "Moderate"
+msgstr ""
+
+msgid "There are currently no reported posts."
+msgstr ""
+
+msgid "Add an account"
+msgstr "Tambahkan akun"
+
+msgid "Update an account"
+msgstr "Perbarui akun"
+
+msgid "Leave blank to maintain current password"
+msgstr ""
+
+msgid "Username"
+msgstr "Nama Pengguna"
+
+msgid "Role"
+msgstr "Peran"
+
+msgid "Choose a role"
+msgstr "Pilih peran"
+
+msgid "Last active"
+msgstr "Terakhir aktif"
+
+msgid "Never"
+msgstr ""
+
+msgid "update"
+msgstr "perbarui"
+
+msgid "Add a ban"
+msgstr ""
+
+msgid ""
+"Multiple IP addresses may be banned at once by separating each address with "
+"a comma."
+msgstr ""
+
+msgid "IP Address"
+msgstr "Alamat IP"
+
+msgid "Expire(sec)"
+msgstr "Kedaluwarsa(detik)"
+
+msgid "never"
+msgstr "tidak pernah"
+
+msgid "Optional."
+msgstr "Opsional."
+
+msgid "1 hour"
+msgstr "1 jam"
+
+msgid "1 day"
+msgstr "1 hari"
+
+msgid "2 days"
+msgstr "2 hari"
+
+msgid "1 week"
+msgstr "1 pekan"
+
+msgid "2 weeks"
+msgstr "2 pekan"
+
+msgid "1 month"
+msgstr "1 bulan"
+
+msgid "Append a message to the post. Optional."
+msgstr ""
+
+msgid "Set At"
+msgstr "Diatur pada"
+
+msgid "Expires"
+msgstr "Kedaluwarsa"
+
+msgid "Does not expire"
+msgstr "Tidak akan kedaluwarsa"
+
+msgid "lift"
+msgstr ""
+
+msgid "Moderate a post"
+msgstr ""
+
+msgid "Post ID"
+msgstr "ID pos"
+
+msgid "Tip"
+msgstr ""
+
+msgid ""
+"While browsing the image board, you can easily moderate a post if you are "
+"logged in."
+msgstr ""
+"Ketika menjelajah, Anda bisa dengan mudah memoderasi pos jika Anda telah "
+"masuk."
+
+msgid ""
+"Tick the box next to a post and click \"Delete\" at the bottom of the page "
+"with a blank password."
+msgstr ""
+
+#, php-format
+msgid "Moderate %d posts"
+msgstr "Moderasi %d pos"
+
+msgid "Delete all"
+msgstr "Hapus semua"
+
+msgid "Ban all"
+msgstr "Blokir semua"
+
+msgid "1 thread and 1 reply will be deleted."
+msgstr "1 utas dan 1 balasan akan dihapus."
+
+#, php-format
+msgid "1 thread and %d replies will be deleted."
+msgstr "1 utas dan %d balasan akan dihapus."
+
+#, php-format
+msgid "%d threads and 1 reply will be deleted."
+msgstr "%d utas dan 1 balasan akan dihapus."
+
+#, php-format
+msgid "%1$d threads and %2$d replies will be deleted."
+msgstr "%1$d utas dan %2$d balasan akan dihapus."
+
+msgid "1 IP address will be banned."
+msgstr "1 alamat IP akan diblokir."
+
+#, php-format
+msgid "%d IP addresses will be banned."
+msgstr "%d alamat IP akan diblokir."
+
+#, php-format
+msgid " A ban record already exists for %s"
+msgstr ""
+
+msgid "Only an administrator may ban an IP address."
+msgstr "Hanya administrator yang bisa memblokir alamat IP."
+
+#, php-format
+msgid "IP address: %s"
+msgstr "Alamat IP: %s"
+
+msgid "Thread"
+msgstr "Utas"
+
+msgid "1 reply will be deleted."
+msgstr "1 balasan akan dihapus."
+
+#, php-format
+msgid "%d replies will be deleted."
+msgstr "%d balasan akan dihapus."
+
+#, php-format
+msgid "Belongs to %s"
+msgstr ""
+
+msgid "Un-sticky"
+msgstr ""
+
+msgid "Sticky"
+msgstr ""
+
+msgid "Return this thread to a normal state."
+msgstr ""
+
+msgid "Keep this thread at the top of the board."
+msgstr ""
+
+msgid "Unlock"
+msgstr "Buka kunci"
+
+msgid "Lock"
+msgstr "Kunci"
+
+msgid "Allow replying to this thread."
+msgstr "Perbolehkan membalas ke utas ini."
+
+msgid "Disallow replying to this thread."
+msgstr ""
+
+#, php-format
+msgid "Moderating No.%d"
+msgstr ""
+
+msgid "Action"
+msgstr "Aksi"
+
+msgid "Delete thread"
+msgstr "Hapus utas"
+
+msgid "Delete reply"
+msgstr "Hapus balasan"
+
+msgid "Ban poster"
+msgstr ""
+
+msgid "Approve"
+msgstr "Setujui"
+
+msgid "report"
+msgstr "laporan"
+
+msgid "reports"
+msgstr "laporan"
+
+msgid "Sorry, there doesn't appear to be a keyword with that ID."
+msgstr ""
+
+msgid "Add"
+msgstr "Tambah"
+
+msgid "Hide until approved"
+msgstr "Sembunyikan sampai disetujui"
+
+msgid "Delete and ban for 1 hour"
+msgstr "Hapus dan banned untuk 1 jam"
+
+msgid "Delete and ban for 1 day"
+msgstr "Hapus dan banned untuk 1 hari"
+
+msgid "Delete and ban for 2 days"
+msgstr "Hapus dan banned untuk 2 hari"
+
+msgid "Delete and ban for 1 week"
+msgstr "Hapus dan banned untuk 1 minggu"
+
+msgid "Delete and ban for 2 weeks"
+msgstr "Hapus dan banned untuk 2 minggu"
+
+msgid "Delete and ban for 1 month"
+msgstr "Hapus dan banned untuk 1 bulan"
+
+msgid "Delete and ban permanently"
+msgstr "Hapus dan banned permanen"
+
+msgid "Edit"
+msgstr "Ubah"
+
+msgid "thread"
+msgstr "utas"
+
+msgid "threads"
+msgstr "utas"
+
+msgid "ban"
+msgstr "banned"
+
+msgid "bans"
+msgstr "banned"
+
+msgid "More Info"
+msgstr "Info lengkap"
+
+msgid "Pending posts"
+msgstr "Postingan tertunda"
+
+msgid "Recent posts"
+msgstr "Posting terbaru"
+
+msgid "Info"
+msgstr "Info"

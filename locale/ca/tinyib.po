@@ -1,0 +1,892 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: trevor@rocketnine.space\n"
+"POT-Creation-Date: 2023-01-05 10:20-0800\n"
+"PO-Revision-Date: 2022-05-11 11:15+0000\n"
+"Last-Translator: Charlie Towers <xtowersx@protonmail.com>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/tinyib/tinyib/ca/"
+">\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.12.1\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: imgboard.php\n"
+"X-Poedit-SearchPath-1: inc/functions.php\n"
+"X-Poedit-SearchPath-2: inc/html.php\n"
+
+msgid "Click here to go back"
+msgstr "Prem ací per tornar enrere"
+
+msgid "TINYIB_HCAPTCHA_SITE and TINYIB_HCAPTCHA_SECRET  must be configured."
+msgstr ""
+"TINYIB_HCAPTCHA_SITE and TINYIB_HCAPTCHA_SECRET  ha d'ésser configurat."
+
+msgid "TINYIB_RECAPTCHA_SITE and TINYIB_RECAPTCHA_SECRET  must be configured."
+msgstr ""
+"TINYIB_RECAPTCHA_SITE and TINYIB_RECAPTCHA_SECRET  ha d'ésser configurat."
+
+msgid "TINYIB_TRIPSEED must be configured."
+msgstr "TINYIB_TRIPSEED ha d'ésser configurat."
+
+msgid "Unknown database mode specified."
+msgstr "Mode de base de dades desconegut."
+
+#, php-format
+msgid "Directory '%s' can not be written to.  Please modify its permissions."
+msgstr ""
+"Al directori '%s' no s'hi pot escriure.  Si us play modifica'n els permisos."
+
+msgid "Posting is currently disabled.<br>Please try again in a few moments."
+msgstr ""
+"La publicació actualment es troba desactivada.<br>Si us plau, torna a provar-"
+"ho d'aquí uns instants."
+
+msgid "Invalid parent thread ID supplied, unable to create post."
+msgstr "L'ID del fil pare és invàlid i no es pot crear la publicació."
+
+msgid "Replies are not allowed to locked threads."
+msgstr "Les respostes als fils blocats no són permeses."
+
+msgid "Your post contains a blocked keyword."
+msgstr "La teva publicació conté un mot blocat."
+
+msgid "Keyword"
+msgstr "Mot"
+
+#, php-format
+msgid "Your IP address (%1$s) is banned until %2$s."
+msgstr "La teva adreça IP (%1$s) es troba blocada fins %2$s."
+
+#, php-format
+msgid "Your IP address (%s) is permanently banned."
+msgstr "La teva adreça IP (%s) es troba permanentment blocada."
+
+msgid "Reason"
+msgstr "Raó"
+
+msgid "Embedding a URL and uploading a file at the same time is not supported."
+msgstr "Inserir una URL i, alhora, pujar un fitxer no és suportat."
+
+#, php-format
+msgid "Invalid embed URL. Only %s URLs are supported."
+msgstr "URL invàlida per a inserir. Només es suporten %s URLs."
+
+#, php-format
+msgid "That file is larger than %s."
+msgstr "Aquest fitxer és més gran de %s."
+
+msgid "Failed to download file at specified URL."
+msgstr "La baixada del fitxer a l'URL especificat ha fallat."
+
+msgid "Error while processing audio/video."
+msgstr "Error mentre es processava àudio/vídeo."
+
+msgid "Could not create thumbnail."
+msgstr "No es pot crear la miniatura."
+
+msgid "upload a file or embed a URL"
+msgstr "puja un fitxer o insereix una URL"
+
+msgid "upload a file"
+msgstr "puja un fitxer"
+
+msgid "embed a URL"
+msgstr "insereix un URL"
+
+#, php-format
+msgid "Please %s to start a new thread."
+msgstr "Si us plau %s per a començar un nou fil."
+
+#, php-format
+msgid "Please enter a message and/or %s."
+msgstr "Si us plau, introdueix un missatge i/o %s."
+
+msgid "Please enter a message."
+msgstr "Si us plau, introdueix un missatge."
+
+#, php-format
+msgid "Please %s."
+msgstr "Si us plau %s."
+
+#, php-format
+msgid "Your %s will be shown <b>once it has been approved</b>."
+msgstr "El teu %s serà mostrat <b>després d'ésser aprovat</b>."
+
+msgid "Updating thread..."
+msgstr "Actualitzant el fil..."
+
+msgid "Updating index..."
+msgstr "Actualitzant l'índex..."
+
+msgid "Created staff post"
+msgstr "Publicació del personal creada"
+
+msgid "This post has been deleted"
+msgstr "Aquesta publicació ha estat eliminada"
+
+msgid "This post requires moderation before it can be displayed"
+msgstr "Aquesta publicació requereix moderació abans d'ésser mostrada"
+
+msgid "Automatic refreshing is disabled."
+msgstr "El refresc automàtic és desactivat."
+
+msgid "Reporting is disabled."
+msgstr "El report és desactivat."
+
+msgid ""
+"Sorry, an invalid post identifier was sent. Please go back, refresh the "
+"page, and try again."
+msgstr ""
+"Discupleu, s'ha enviat un identificador de publicació incorrecte. Si us "
+"plau, torneu enrere, recarregueu la plana i torneu a intentar-ho."
+
+msgid "Moderators have determined that post does not break any rules."
+msgstr "Els moderadors han decidit que aquesta publicació no trenca cap regla."
+
+msgid "You have already submitted a report for that post."
+msgstr "Ja has enviat un report per a aquesta publicació."
+
+msgid "(enter the text below)"
+msgstr "(introdueix el text de sota)"
+
+msgid "Please complete a CAPTCHA to submit your report"
+msgstr "Si us plau, completa el CAPTCHA per a poder enviar el teu report"
+
+msgid "Submit"
+msgstr "Envia"
+
+msgid "Post reported."
+msgstr "Publicació reportada."
+
+msgid "Tick the box next to a post and click \"Delete\" to delete it."
+msgstr ""
+"Marca la caixeta del costat de la publicació i prem \"Esborrar\" per a "
+"eliminar-la."
+
+msgid ""
+"Post deletion is currently disabled.<br>Please try again in a few moments."
+msgstr ""
+"L'eliminació de publicacions és desactivada.<br>Si us plau, torna a intentar-"
+"ho d'aquí uns instants."
+
+msgid "Post deleted."
+msgstr "Publicació eliminada."
+
+msgid "Invalid password."
+msgstr "Contrasenya invàlida."
+
+msgid "Rebuilt board."
+msgstr "Reconstruir l'imageboard."
+
+msgid "Access denied"
+msgstr "Accés denegat"
+
+msgid "Account not found."
+msgstr "No s'ha trobat el compte."
+
+msgid "This account may not be updated while TINYIB_ADMINPASS is set."
+msgstr ""
+"Aquest compte no ha d'ésser modificat mentre la variable TINYIB_ADMINPASS es "
+"trobi definida."
+
+msgid "This account may not be updated while TINYIB_MODPASS is set."
+msgstr ""
+"Aquest compte no hauria d'ésser actualitzat mentre la variable "
+"TINYIB_MODPASS es trobi definida."
+
+msgid "A password is required."
+msgstr "Es requereix una contrasenya."
+
+msgid "Invalid role."
+msgstr "Rol invàlid."
+
+#, php-format
+msgid "Added account %s"
+msgstr "El compte %s ha estat afegit"
+
+msgid "Added account"
+msgstr "Compte afegit"
+
+#, php-format
+msgid "Renamed account %1$s as %2$s"
+msgstr "El compte %1$s ha estat reanomenat a %2$s"
+
+#, php-format
+msgid "Changed password of account %s"
+msgstr "La contrasenya per al compte %s ha estat canviada"
+
+msgid "Super-administrator"
+msgstr "Súper-administrador"
+
+msgid "Administrator"
+msgstr "Administrador"
+
+msgid "Moderator"
+msgstr "Moderador"
+
+msgid "Disabled"
+msgstr "Desactivat"
+
+#, php-format
+msgid "Changed role of account %s to %s"
+msgstr "El rol del compte %s ha estat canviat a %s"
+
+msgid "Updated account"
+msgstr "Compte actualitzat"
+
+msgid "permanently"
+msgstr "permanentment"
+
+#, php-format
+msgid "until %s"
+msgstr "fins %s"
+
+#, php-format
+msgid "Banned %s %s"
+msgstr "Blocat %s %s"
+
+#, php-format
+msgid "Banned %s %s: %s"
+msgstr "Blocat %s %s: %s"
+
+#, php-format
+msgid "Added ban message to %s"
+msgstr "Missatge per blocatge afegit a %s"
+
+msgid "Banned 1 IP address"
+msgstr "1 adreça IP blocada"
+
+#, php-format
+msgid "Banned %d IP addresses"
+msgstr "%d adreces IP blocades"
+
+#, php-format
+msgid "Lifted ban on %s"
+msgstr "S'ha llevat el blocatge a %s"
+
+msgid "Sorry, that keyword has already been added."
+msgstr "Disculpeu, aquest mot ja havia estat afegit."
+
+#, php-format
+msgid "Updated keyword %s"
+msgstr "Mot %s actualitzat"
+
+msgid "Keyword updated."
+msgstr "Mot actualitzat."
+
+msgid "Keyword added."
+msgstr "Mot afegit."
+
+msgid "That keyword does not exist."
+msgstr "Aquest mot no existeix."
+
+#, php-format
+msgid "Deleted keyword %s"
+msgstr "Mot eliminat %s"
+
+msgid "Keyword deleted."
+msgstr "Mot eliminat."
+
+#, php-format
+msgid "Deleted %s"
+msgstr "%s eliminat"
+
+msgid "Deleted 1 post"
+msgstr "1 publicació eliminada"
+
+#, php-format
+msgid "Deleted %d posts"
+msgstr "%d publicacions eliminades"
+
+msgid "Approved"
+msgstr "Aprovat"
+
+#, php-format
+msgid "Post No.%d approved."
+msgstr "La publicació número %d ha estat aprovada."
+
+msgid "Sorry, there doesn't appear to be a post with that ID."
+msgstr "Disculpeu, no sembla que hi hagi cap publicació amb aquest ID."
+
+msgid "Stickied"
+msgstr "Fixat"
+
+msgid "Unstickied"
+msgstr "Alliberat"
+
+msgid "Form data was lost. Please go back and try again."
+msgstr ""
+"La informació del formulari s'ha perdut. Si us plau, torna enrere i prova-ho "
+"una altra vegada."
+
+msgid "Locked"
+msgstr "Blocat"
+
+msgid "Unlocked"
+msgstr "Desblocat"
+
+msgid "Passwords do not match."
+msgstr "Les contrasenyes no coincideixen."
+
+msgid "Password updated"
+msgstr "La contrasenya ha estat actualitzada"
+
+msgid "Please enter the CAPTCHA text."
+msgstr "Si us plau, introdueix el text del CAPTCHA."
+
+msgid ""
+"Incorrect CAPTCHA text entered.  Please try again.<br>Click the image to "
+"retrieve a new CAPTCHA."
+msgstr ""
+"El text del CAPTCHA introduït és incorrecte.  Si us plau, torna a intentar-"
+"ho.<br>Prem sobre la imatge per a obtenir un nou CAPTCHA."
+
+#, php-format
+msgid ""
+"Please shorten your message, or post it in multiple parts. Your message is "
+"%1$d characters long, and the maximum allowed is %2$d."
+msgstr ""
+"Si us plau, escurça el teu missatge o bé publica'l en múltiples parts. El "
+"teu missatge conté %1$d caràcters i el màxim permès és %2$d."
+
+msgid "Invalid key."
+msgstr "Clau invàlida."
+
+msgid "Invalid username or password."
+msgstr "Usuari o contrasenya invàlids."
+
+#, php-format
+msgid ""
+"The uploaded file exceeds the upload_max_filesize directive (%s) in php.ini."
+msgstr ""
+"El fitxer pujat excedeix la directiva upload_max_filesize (%s) de php.ini."
+
+msgid "The uploaded file was only partially uploaded."
+msgstr "El fitxer ha estat parcialment pujat."
+
+msgid "No file was uploaded."
+msgstr "No s'ha pujat cap fitxer."
+
+msgid "Missing a temporary folder."
+msgstr "Hi manca una carpeta temporal."
+
+msgid "Failed to write file to disk"
+msgstr "Ha fallat l'escriptura del fitxer al disc"
+
+msgid "Unable to save the uploaded file."
+msgstr "No s'ha pogut desar el fitxer pujat."
+
+#, php-format
+msgid ""
+"Duplicate file uploaded. That file has already been posted <a "
+"href=\"%s\">here</a>."
+msgstr ""
+"S'ha pujat un fitxer duplicat. Aquest fitxer ja havia estat publicat <a "
+"href=\"%s\">ací</a>."
+
+msgid ""
+"Unable to read the uploaded file while creating its thumbnail. A common "
+"cause for this is an incorrect extension when the file is actually of a "
+"different type."
+msgstr ""
+"Ha estat impossible llegir el fitxer pujat mentre es creava la seva "
+"miniatura. Una causa habitual sol ser que contingui una extensió incorrecta "
+"per al tipus de fitxer."
+
+msgid "File transfer failure. Please retry the submission."
+msgstr ""
+"Ha fallat la transferència del fitxer. Si us plau, reintenta l'enviament."
+
+msgid ""
+"Failed to read the MIME type and size of the uploaded file. Please retry the "
+"submission."
+msgstr ""
+"Ha fallat la lectura del tipus MIME i de la mida del fitxer pujat. Si us "
+"plau, reintenta l'enviament."
+
+msgid "Could not copy uploaded file."
+msgstr "No s'ha pogut copiar el fitxer pujat."
+
+msgid "File transfer failure. Please go back and try again."
+msgstr ""
+"Ha fallat la transferència del fitxer. Si us plau, torna enrere i intenta-ho "
+"novament."
+
+msgid "Sorry, your video appears to be corrupt."
+msgstr "Disculpa, el teu vídeo sembla corromput."
+
+#, php-format
+msgid "Supported file type is %s"
+msgstr "El tipus de fitxer suportat és %s"
+
+#, php-format
+msgid "Supported file types are %1$s and %2$s."
+msgstr "Els tipus de fitxers suportats són %1$s i %2$s."
+
+msgid "Raw HTML"
+msgstr "HTML cru"
+
+msgid "Enable"
+msgstr "Activa"
+
+msgid ""
+"Text entered in the Message field will be posted as is with no formatting "
+"applied."
+msgstr ""
+"El text introduït en el camp Missatge serà publicat tal comés i sense cap "
+"formatació aplicada."
+
+msgid "Line-breaks must be specified with \"&lt;br&gt;\"."
+msgstr "Els salts de línia s'han d'especificar amb \"&lt;br&gt;\"."
+
+msgid "Reply to"
+msgstr "Respon a"
+
+msgid "0 to start a new thread"
+msgstr "0 per a començar un nou fil"
+
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+#, php-format
+msgid "Maximum file size allowed is %s."
+msgstr "La mida màxima de fitxer autoritzada és %s."
+
+msgid "File"
+msgstr "Fitxer"
+
+msgid "Embed"
+msgstr "Insereix"
+
+msgid "(paste a YouTube URL)"
+msgstr "(enganxa un URL de YouTube)"
+
+msgid "All posts are moderated before being shown."
+msgstr "Totes les publicacions són moderades abans d'ésser mostrades."
+
+msgid "All posts with a file attached are moderated before being shown."
+msgstr ""
+"Totes les publicacions amb fitxer adjunt són moderades abans d'ésser "
+"mostrades."
+
+#, php-format
+msgid "Images greater than %s will be thumbnailed."
+msgstr "Les imatges més grans de %s seran miniaturitzades."
+
+#, php-format
+msgid "Currently %s unique user posts."
+msgstr "Actualment %s publicacions úniques."
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "E-mail"
+msgstr "E-mail"
+
+msgid "Subject"
+msgstr "Assumpte"
+
+msgid "Message"
+msgstr "Missatge"
+
+msgid "Password"
+msgstr "Contrasenya"
+
+msgid "(for post and file deletion)"
+msgstr "(per a l'eliminació de publicació i fitxer)"
+
+msgid "Report"
+msgstr "Reporta"
+
+msgid "Reply"
+msgstr "Respon"
+
+msgid "Post truncated. Click Reply to view."
+msgstr "La publicació ha estat truncada. Prem Respon per a veure-la."
+
+msgid "1 post omitted. Click Reply to view."
+msgstr "S'ha omès 1 publicació. Prem Respon per a veure-ho."
+
+#, php-format
+msgid "%d posts omitted. Click Reply to view."
+msgstr "%d publicacions omeses. Prem Respon per a veure-ho."
+
+msgid "Catalog"
+msgstr "Catàleg"
+
+msgid "Manage"
+msgstr "Administra"
+
+msgid "Previous"
+msgstr "Previ"
+
+msgid "Next"
+msgstr "Següent"
+
+msgid "Return"
+msgstr "Recula"
+
+msgid "Posting mode: Reply"
+msgstr "Mode de publicació: Resposta"
+
+msgid "Style"
+msgstr "Estil"
+
+msgid "Delete"
+msgstr "Esborra"
+
+msgid "Delete Post"
+msgstr "Esborra la publicació"
+
+msgid "Accounts"
+msgstr "Comptes"
+
+msgid "Bans"
+msgstr "Bloquejos"
+
+msgid "Keywords"
+msgstr "Mots"
+
+msgid "Migrate Database"
+msgstr "Migrar Base de Dades"
+
+msgid "Moderate Post"
+msgstr "Moderar Publicació"
+
+msgid "Moderation Log"
+msgstr "Històric de Moderació"
+
+msgid "Rebuild All"
+msgstr "Reconstrueix-ho tot"
+
+msgid "Reports"
+msgstr "Reports"
+
+msgid "Staff Post"
+msgstr "Publicació del Personal"
+
+msgid "Status"
+msgstr "Estat"
+
+msgid "Update"
+msgstr "Actualitza"
+
+msgid "Change Password"
+msgstr "Canvia la Contrasenya"
+
+msgid "Log Out"
+msgstr "Ix"
+
+msgid "Manage mode"
+msgstr "Mode d'Administració"
+
+msgid "Log In"
+msgstr "Identifica't"
+
+msgid "Enter a username and password"
+msgstr "Introdueix un nom d'usuari i una contrasenya"
+
+msgid "No logs."
+msgstr "Sense històrics."
+
+msgid "Moderation log"
+msgstr "Històric de moderació"
+
+msgid "Reported posts"
+msgstr "Publicacions reportades"
+
+#, php-format
+msgid "%1$d report by %2$s"
+msgstr "%1$d report per %2$s"
+
+#, php-format
+msgid "%1$d reports by %2$s"
+msgstr "%1$d reports per %2$s"
+
+#, php-format
+msgid "%d reports"
+msgstr "%d reports"
+
+#, php-format
+msgid "Reported by %s"
+msgstr "Reportat per %s"
+
+msgid "Moderate"
+msgstr "Modera"
+
+msgid "There are currently no reported posts."
+msgstr "Actualment no hi ha cap publicació reportada."
+
+msgid "Add an account"
+msgstr "Afegeix un compte"
+
+msgid "Update an account"
+msgstr "Actualitza un compte"
+
+msgid "Leave blank to maintain current password"
+msgstr "Deixa-ho en blanc per a conservar la contrasenya actual"
+
+msgid "Username"
+msgstr "Nom d'usuari"
+
+msgid "Role"
+msgstr "Rol"
+
+msgid "Choose a role"
+msgstr "Tria un rol"
+
+msgid "Last active"
+msgstr "Darrer actiu"
+
+msgid "Never"
+msgstr "Mai"
+
+msgid "update"
+msgstr "actualitza"
+
+msgid "Add a ban"
+msgstr "Afegeix un blocatge"
+
+msgid ""
+"Multiple IP addresses may be banned at once by separating each address with "
+"a comma."
+msgstr "Per a blocar múltiples adreces IP cal separar-les amb una coma."
+
+msgid "IP Address"
+msgstr "Adreça IP"
+
+msgid "Expire(sec)"
+msgstr "Expira(seg)"
+
+msgid "never"
+msgstr "mai"
+
+msgid "Optional."
+msgstr "Opcional."
+
+msgid "1 hour"
+msgstr "1 hora"
+
+msgid "1 day"
+msgstr "1 dia"
+
+msgid "2 days"
+msgstr "2 dies"
+
+msgid "1 week"
+msgstr "1 setmana"
+
+msgid "2 weeks"
+msgstr "2 setmanes"
+
+msgid "1 month"
+msgstr "1 mes"
+
+msgid "Append a message to the post. Optional."
+msgstr "Afegeix un missatge a la publicació. Opcional."
+
+msgid "Set At"
+msgstr "Estableix A"
+
+msgid "Expires"
+msgstr "Expira"
+
+msgid "Does not expire"
+msgstr "No expira"
+
+msgid "lift"
+msgstr "lleva"
+
+msgid "Moderate a post"
+msgstr "Modera una publicació"
+
+msgid "Post ID"
+msgstr "ID de publicació"
+
+msgid "Tip"
+msgstr "Consell"
+
+msgid ""
+"While browsing the image board, you can easily moderate a post if you are "
+"logged in."
+msgstr ""
+"Mentre consultes l'imageboard, pots moderar fàcilment les publicacions si et "
+"trobes identificat."
+
+msgid ""
+"Tick the box next to a post and click \"Delete\" at the bottom of the page "
+"with a blank password."
+msgstr ""
+"Marca la caixeta al costat d'una publicació i prem \"Esborra\" al peu de la "
+"plana amb la contrasenya en blanc."
+
+#, php-format
+msgid "Moderate %d posts"
+msgstr "Modera %d publicacions"
+
+msgid "Delete all"
+msgstr "Esborra-ho tot"
+
+msgid "Ban all"
+msgstr "Bloca a tothom"
+
+msgid "1 thread and 1 reply will be deleted."
+msgstr "1 fil i 1 resposta seran esborrades."
+
+#, php-format
+msgid "1 thread and %d replies will be deleted."
+msgstr "1 fil i %d respostes seran esborrades."
+
+#, php-format
+msgid "%d threads and 1 reply will be deleted."
+msgstr "%d fils i 1 resposta seran esborrats."
+
+#, php-format
+msgid "%1$d threads and %2$d replies will be deleted."
+msgstr "%1$d fils i %2$d respostes seran esborrats."
+
+msgid "1 IP address will be banned."
+msgstr "1 adreça IP serà blocada."
+
+#, php-format
+msgid "%d IP addresses will be banned."
+msgstr "%d adreces IP seran blocades."
+
+#, php-format
+msgid " A ban record already exists for %s"
+msgstr " %s ja es troba blocat"
+
+msgid "Only an administrator may ban an IP address."
+msgstr "Només els administradors poden blocar una adreça IP."
+
+#, php-format
+msgid "IP address: %s"
+msgstr "Adreça IP: %s"
+
+msgid "Thread"
+msgstr "Fil"
+
+msgid "1 reply will be deleted."
+msgstr "1 reposta serà esborrada."
+
+#, php-format
+msgid "%d replies will be deleted."
+msgstr "%d respostes seran esborrades."
+
+#, php-format
+msgid "Belongs to %s"
+msgstr ""
+
+msgid "Un-sticky"
+msgstr "Allibera"
+
+msgid "Sticky"
+msgstr "Fixa"
+
+msgid "Return this thread to a normal state."
+msgstr "Retorna aquest fil a un estat normal."
+
+msgid "Keep this thread at the top of the board."
+msgstr "Mantingues aquest fil al principi de l'imageboard."
+
+msgid "Unlock"
+msgstr "Desprotegeix"
+
+msgid "Lock"
+msgstr "Protegeix"
+
+msgid "Allow replying to this thread."
+msgstr "Permet les respostes en aquest fil."
+
+msgid "Disallow replying to this thread."
+msgstr "Prohibeix les respostes en aquest fil."
+
+#, php-format
+msgid "Moderating No.%d"
+msgstr "Moderació No.%d"
+
+msgid "Action"
+msgstr "Acció"
+
+msgid "Delete thread"
+msgstr "Esborra fil"
+
+msgid "Delete reply"
+msgstr "Esborra resposta"
+
+msgid "Ban poster"
+msgstr "Bloca publicador"
+
+msgid "Approve"
+msgstr "Aprova"
+
+msgid "report"
+msgstr "reporta"
+
+msgid "reports"
+msgstr "reports"
+
+msgid "Sorry, there doesn't appear to be a keyword with that ID."
+msgstr "Disculpa, sembla que no hi ha cap mot amb aquest ID."
+
+msgid "Add"
+msgstr "Afegeix"
+
+msgid "Hide until approved"
+msgstr "Amaga fins que sigui aprovat"
+
+msgid "Delete and ban for 1 hour"
+msgstr "Esborra i bloca per 1 hora"
+
+msgid "Delete and ban for 1 day"
+msgstr "Esborra i bloca per 1 dia"
+
+msgid "Delete and ban for 2 days"
+msgstr "Esborra i bloca per 2 dies"
+
+msgid "Delete and ban for 1 week"
+msgstr "Esborra i bloca per 1 setmana"
+
+msgid "Delete and ban for 2 weeks"
+msgstr "Esborra i bloca per 2 setmanes"
+
+msgid "Delete and ban for 1 month"
+msgstr "Esborra i bloca per 1 mes"
+
+msgid "Delete and ban permanently"
+msgstr "Esborra i bloca permanentment"
+
+msgid "Edit"
+msgstr "Edita"
+
+msgid "thread"
+msgstr "fil"
+
+msgid "threads"
+msgstr "fils"
+
+msgid "ban"
+msgstr "bloca"
+
+msgid "bans"
+msgstr "bloquejos"
+
+msgid "More Info"
+msgstr "Més Info"
+
+msgid "Pending posts"
+msgstr "Publicacions pendents"
+
+msgid "Recent posts"
+msgstr "Publicacions recents"
+
+msgid "Info"
+msgstr "Info"
+
+#~ msgid "Belongs to "
+#~ msgstr "Pertany a "
