@@ -239,7 +239,7 @@ function setPostAttributes(element, autorefresh) {
                 return;
             }
 
-            if (enablebacklinks && autorefresh) {
+            if (autorefresh && enablebacklinks) {
                 backlinks = $('#backlinks' + m[1]);
                 if (backlinks) {
                     if (backlinks.html() == '') {

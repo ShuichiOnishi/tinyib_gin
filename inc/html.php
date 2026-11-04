@@ -37,7 +37,7 @@ function pageHeader() {
 		<link rel="shortcut icon" href="favicon.ico">
 		$stylesheets
 		<script src="js/jquery.js"></script>
-		<script src="js/tinyib.js"></script>
+		<script src="js/tinyib.js?v=20261104-mobile"></script>
 		$js_captcha
 	</head>
 EOF;
@@ -47,7 +47,7 @@ function pageStylesheets() {
 	global $tinyib_stylesheets;
 
 	// Global stylesheet
-	$return = '<link rel="stylesheet" type="text/css" href="css/global.css">';
+	$return = '<link rel="stylesheet" type="text/css" href="css/global.css?v=20261104-mobile">';
 
 	// Default stylesheet
 	$return .= '<link rel="stylesheet" type="text/css" href="css/' . htmlentities(TINYIB_DEFAULTSTYLE, ENT_QUOTES) . '.css" title="' . htmlentities($tinyib_stylesheets[TINYIB_DEFAULTSTYLE], ENT_QUOTES) . '" id="mainStylesheet">';
@@ -913,7 +913,9 @@ EOF;
 		</div>
 		<hr width="90%">
 		<div class="replymode">$txt_manage_mode</div>
+		<div class="managecontent">
 		$text
+		</div>
 		<hr>
 EOF;
 	return pageHeader() . $body . pageFooter();
@@ -931,7 +933,7 @@ function manageOnLoad($page) {
 		case 'moderate':
 			return ' onload="document.tinyib.moderate.focus();"';
 		case 'staffpost':
-			return ' onload="document.tinyib.message.focus();"';
+			return ' onload="document.postform.message.focus();"';
 	}
 }
 

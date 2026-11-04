@@ -173,3 +173,188 @@ hr {
 	margin: 5px 0 0 2px;
 	font-weight: bold;
 }
+
+/* Keep wide administrative tables inside their own scrollable region. */
+.managecontent {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+/* Retain the desktop board layout; stack controls on narrow screens. */
+@media screen and (max-width: 640px) {
+	body {
+		padding: 8px;
+		overflow-wrap: anywhere;
+		line-height: 1.5;
+	}
+
+	input, select, textarea, button {
+		box-sizing: border-box;
+		max-width: 100%;
+		font-size: 16px;
+	}
+
+	input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),
+	select, button, .managebutton {
+		min-height: 44px;
+	}
+
+	input[type="checkbox"], input[type="radio"] {
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	.adminbar, .floatpost {
+		float: none;
+		text-align: left;
+	}
+
+	.adminbar {
+		line-height: 2.75;
+	}
+
+	.adminbar a {
+		display: inline-block;
+		min-height: 44px;
+	}
+
+	.logo img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.replymode, .manageinfo, .catalogmode, fieldset {
+		box-sizing: border-box;
+		min-width: 0;
+		max-width: 100%;
+	}
+
+	.postarea .postform,
+	.postarea .postform > tbody,
+	.postarea .postform > tbody > tr,
+	.postarea .postform > tbody > tr > td {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		min-width: 0;
+	}
+
+	.postarea .postform > tbody > tr > td {
+		padding: 4px 0;
+	}
+
+	.postarea .postform .postblock {
+		padding: 4px 8px;
+	}
+
+	.postarea input[type="text"], .postarea input[type="password"],
+	.postarea input[type="file"], .postarea textarea {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.postarea textarea {
+		min-height: 8em;
+	}
+
+	.postarea .rules {
+		width: auto;
+		font-size: 12px;
+	}
+
+	#posts > table,
+	#posts > table > tbody,
+	#posts > table > tbody > tr,
+	#posts > table > tbody > tr > td.reply {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		min-width: 0;
+	}
+
+	#posts > table {
+		margin: 8px 0;
+		border-spacing: 0;
+	}
+
+	#posts > table > tbody > tr > td.reply {
+		padding: 8px;
+	}
+
+	#posts .doubledash {
+		display: none;
+	}
+
+	#posts img, #posts video, #posts iframe, #posts embed, #posts object {
+		max-width: 100%;
+	}
+
+	#posts img, #posts video {
+		height: auto;
+	}
+
+	#posts [id^="file"] img, #posts [id^="file"] video {
+		min-width: 0 !important;
+		min-height: 0 !important;
+		max-width: 100% !important;
+	}
+
+	#posts .thumb, #posts .nothumb {
+		float: none;
+		box-sizing: border-box;
+		margin: 8px 0;
+		max-width: 100%;
+	}
+
+	#posts .message {
+		margin: 12px 4px;
+	}
+
+	.reply .filesize {
+		margin-left: 0;
+	}
+
+	.aa, pre {
+		max-width: 100%;
+		overflow-x: auto;
+		overflow-wrap: normal;
+	}
+
+	.catalogpost {
+		box-sizing: border-box;
+		width: calc(50% - 4px);
+		min-width: 0;
+		white-space: normal;
+	}
+
+	.userdelete {
+		float: none;
+		width: 100%;
+		white-space: normal;
+		text-align: left;
+	}
+
+	.userdelete input {
+		margin: 4px 0;
+	}
+
+	.managecontent fieldset {
+		margin-inline: 0;
+	}
+
+	.managecontent .login input {
+		margin: 4px 0;
+	}
+
+	.hoverpost {
+		left: 8px !important;
+		right: 8px;
+		box-sizing: border-box;
+		max-width: calc(100vw - 16px);
+	}
+}
