@@ -13,10 +13,10 @@ function pageHeader() {
 	}
 
 	$js_captcha = '';
-	if (TINYIB_CAPTCHA === 'hcaptcha' || TINYIB_REPLYCAPTCHA === 'hcaptcha' || TINYIB_MANAGECAPTCHA === 'hcaptcha') {
+	if (TINYIB_CAPTCHA === 'hcaptcha' || TINYIB_MANAGECAPTCHA === 'hcaptcha') {
 		$js_captcha .= '<script src="https://www.hcaptcha.com/1/api.js" async defer></script>';
 	}
-	if (TINYIB_CAPTCHA === 'recaptcha' || TINYIB_REPLYCAPTCHA === 'recaptcha' || TINYIB_MANAGECAPTCHA === 'recaptcha') {
+	if (TINYIB_CAPTCHA === 'recaptcha' || TINYIB_MANAGECAPTCHA === 'recaptcha') {
 		$js_captcha .= '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
 	}
 
@@ -37,7 +37,7 @@ function pageHeader() {
 		<link rel="shortcut icon" href="favicon.ico">
 		$stylesheets
 		<script src="js/jquery.js"></script>
-		<script src="js/tinyib.js?v=20261104-mobile"></script>
+		<script src="js/tinyib.js?v=20261104-no-replies"></script>
 		$js_captcha
 	</head>
 EOF;
@@ -110,6 +110,9 @@ function makeLinksClickable($text) {
 }
 
 function buildPostForm($parent, $staff_post = false) {
+	if ($parent != TINYIB_NEWTHREAD) {
+		return '';
+	}
 	global $tinyib_hidefieldsop, $tinyib_hidefields, $tinyib_uploads, $tinyib_embeds;
 	$hide_fields = $parent == TINYIB_NEWTHREAD ? $tinyib_hidefieldsop : $tinyib_hidefields;
 
@@ -153,12 +156,8 @@ function buildPostForm($parent, $staff_post = false) {
 		$txt_enable = __('Enable');
 		$txt_raw_html_info_1 = __('Text entered in the Message field will be posted as is with no formatting applied.');
 		$txt_raw_html_info_2 = __('Line-breaks must be specified with "&lt;br&gt;".');
-
-		$txt_reply_to = __('Reply to');
-		$txt_new_thread = __('0 to start a new thread');
-
 		$form_action = '?';
-		$form_extra = '<input type="hidden" name="staffpost" value="1">';
+		$form_extra .= '<input type="hidden" name="staffpost" value="1">';
 		$input_extra = <<<EOF
 					<tr>
 						<td class="postblock">
@@ -170,14 +169,6 @@ function buildPostForm($parent, $staff_post = false) {
 							&nbsp; 	<small>$txt_raw_html_info_1</small><br>
 							&nbsp; 	<small>$txt_raw_html_info_2</small>
 							</label>
-						</td>
-					</tr>
-					<tr>
-						<td class="postblock">
-							$txt_reply_to
-						</td>
-						<td>
-							<input type="text" name="parent" size="28" maxlength="75" value="0" accesskey="t">&nbsp;$txt_new_thread
 						</td>
 					</tr>
 EOF;
@@ -295,9 +286,6 @@ EOF;
 	$thumbnails_html = '';
 	if (isset($tinyib_uploads['image/jpeg']) || isset($tinyib_uploads['image/pjpeg']) || isset($tinyib_uploads['image/png']) || isset($tinyib_uploads['image/gif'])) {
 		$maxdimensions = TINYIB_MAXWOP . 'x' . TINYIB_MAXHOP;
-		if (TINYIB_MAXW != TINYIB_MAXWOP || TINYIB_MAXH != TINYIB_MAXHOP) {
-			$maxdimensions .= ' (new thread) or ' . TINYIB_MAXW . 'x' . TINYIB_MAXH . ' (reply)';
-		}
 
 		$thumbnails_html = '<li>' . sprintf(__('Images greater than %s will be thumbnailed.'), $maxdimensions) . '</li>';
 	}
@@ -458,9 +446,9 @@ function buildPost($post, $res, $compact=false) {
 	}
 
 	if ($res == TINYIB_RESPAGE) {
-		$reflink .= "<a href=\"$threadid.html#{$post['id']}\">No.</a><a href=\"$threadid.html#q{$post['id']}\" onclick=\"javascript:quotePost('{$post['id']}')\">{$post['id']}</a>";
+		$reflink .= "<a href=\"$threadid.html#{$post['id']}\">No.{$post['id']}</a>";
 	} else {
-		$reflink .= "<a href=\"res/$threadid.html#{$post['id']}\">No.</a><a href=\"res/$threadid.html#q{$post['id']}\">{$post['id']}</a>";
+		$reflink .= "<a href=\"res/$threadid.html#{$post['id']}\">No.{$post['id']}</a>";
 	}
 
 	if ($post["stickied"] == 1) {
@@ -589,7 +577,7 @@ EOF;
 
 	if ($post['parent'] == TINYIB_NEWTHREAD) {
 		if ($res == TINYIB_INDEXPAGE) {
-			$return .= "&nbsp;[<a href=\"res/{$post["id"]}.html\">" . __("Reply") . "</a>]";
+			$return .= "&nbsp;[<a href=\"res/{$post["id"]}.html\">" . __("View") . "</a>]";
 		}
 		$return .= backlinks($post);
 	}
@@ -597,7 +585,7 @@ EOF;
 	if (TINYIB_TRUNCATE > 0 && !$res && _substr_count($post['message'], '<br>') > TINYIB_TRUNCATE) { // Truncate messages on board index pages for readability
 		$br_offsets = strallpos($post['message'], '<br>');
 		$post['message'] = _substr($post['message'], 0, $br_offsets[TINYIB_TRUNCATE - 1]);
-		$post['message'] .= '<br><span class="omittedposts">' . __('Post truncated. Click Reply to view.') . '</span><br>';
+		$post['message'] .= '<br><span class="omittedposts">' . __('Post truncated. Open the post to view.') . '</span><br>';
 	}
 	$return .= <<<EOF
 <div class="message">
@@ -609,9 +597,9 @@ EOF;
 		$return .= '</div>';
 		if ($res == TINYIB_INDEXPAGE && $post['omitted'] > 0) {
 			if ($post['omitted'] == 1) {
-				$return .= '<span class="omittedposts">' . __('1 post omitted. Click Reply to view.') . '</span>';
+				$return .= '<span class="omittedposts">' . __('1 post omitted. Open the post to view.') . '</span>';
 			} else {
-				$return .= '<span class="omittedposts">' . sprintf(__('%d posts omitted. Click Reply to view.'), $post['omitted']) . '</span>';
+				$return .= '<span class="omittedposts">' . sprintf(__('%d posts omitted. Open the post to view.'), $post['omitted']) . '</span>';
 			}
 		}
 	} else if ($compact) {
@@ -680,21 +668,16 @@ EOF;
 	} else if ($parent == -1) {
 		$postingmode = '&#91;<a href="index.html">' . __('Return') . '</a>&#93;<div class="replymode">' . __('Catalog') . '</div> ';
 	} else {
-		$postingmode = '&#91;<a href="../">' . __('Return') . '</a>&#93;<div class="replymode">' . __('Posting mode: Reply') . '</div> ';
+		$postingmode = '&#91;<a href="../">' . __('Return') . '</a>&#93;';
 	}
 
 	$postform = '';
-	if ($parent >= 0) { // Negative values indicate the post form should be hidden
+	if ($parent == TINYIB_NEWTHREAD) {
 		$postform = buildPostForm($parent) . '<hr>';
 	}
 
 	$js = '<script type="text/javascript">';
 	$js .= 'var enablebacklinks = ' . (TINYIB_BACKLINKS ? 'true' : 'false') . ';';
-	if ($parent != TINYIB_NEWTHREAD && TINYIB_AUTOREFRESH > 0) {
-		$js .= 'var autoRefreshDelay = ' . TINYIB_AUTOREFRESH . ';';
-		$js .= 'var autoRefreshThreadID = ' . $parent . ';';
-		$js .= 'var autoRefreshPostID = ' . $lastpostid . ';';
-	}
 	$js .= '</script>';
 
 	$txt_style = __('Style');
@@ -761,7 +744,6 @@ function buildCatalogPost($post) {
 		<img src="thumb/{$post['thumb']}" alt="{$post['id']}" width="{$post['thumb_width']}" height="{$post['thumb_height']}" border="0">
 EOF;
 	}
-	$replies = numRepliesToThreadByID($post['id']);
 	$subject = trim($post['subject']) != '' ? $post['subject'] : _substr(trim(str_ireplace("\n", '', strip_tags($post['message']))), 0, 75);
 
 	return <<<EOF
@@ -769,7 +751,6 @@ EOF;
 	<a href="res/{$post['id']}.html">
 		$thumb
 	</a><br>
-	<b>$replies</b><br>
 	$subject
 </div>
 EOF;
@@ -1391,19 +1372,6 @@ function manageModeratePost($post, $compact=false) {
 	</td><td><small>$sticky_unsticky_help</small></td></tr>
 EOF;
 
-		$lock_set = $post['locked'] == 1 ? '0' : '1';
-		$lock_label = $post['locked'] == 1 ? __('Unlock') : __('Lock');
-		$lock_help = $post['locked'] == 1 ? __('Allow replying to this thread.') : __('Disallow replying to this thread.');
-		$lock_html = <<<EOF
-	<tr><td>
-		<form method="get" action="?">
-		<input type="hidden" name="manage" value="">
-		<input type="hidden" name="lock" value="{$post['id']}">
-		<input type="hidden" name="setlock" value="$lock_set">
-		<input type="submit" value="$lock_label" class="managebutton">
-		</form>
-	</td><td><small>$lock_help</small></td></tr>
-EOF;
 	}
 	$post_html = buildPost($post, TINYIB_INDEXPAGE);
 

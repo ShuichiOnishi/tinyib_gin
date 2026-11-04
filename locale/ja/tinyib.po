@@ -878,3 +878,18 @@ msgstr "情報"
 
 #~ msgid "Belongs to "
 #~ msgstr "属する "
+
+msgid "Replies are disabled."
+msgstr "返信機能は無効です。"
+
+msgid "View"
+msgstr "表示"
+
+msgid "Post truncated. Open the post to view."
+msgstr "本文が省略されています。投稿を開くと全文を表示できます。"
+
+msgid "1 post omitted. Open the post to view."
+msgstr "1件の投稿が省略されています。投稿を開くと表示できます。"
+
+msgid "%d posts omitted. Open the post to view."
+msgstr "%d件の投稿が省略されています。投稿を開くと表示できます。"

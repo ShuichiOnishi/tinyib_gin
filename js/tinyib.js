@@ -1,8 +1,3 @@
-var newRepliesCount = 0;
-var newRepliesNotice = [];
-var originalTitle = "";
-var blinkTitle = false;
-
 function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
@@ -36,12 +31,6 @@ function reloadCAPTCHA() {
     return false;
 }
 
-function quotePost(postID) {
-    $("#message").val($("#message").val() + '>>' + postID + "\n").focus();
-
-    return false;
-}
-
 function expandFile(e, id) {
     if (e == undefined || e.which == undefined || e.which == 1) {
         if ($("#thumbfile" + id).attr('expanded') != 'true') {
@@ -62,76 +51,6 @@ function expandFile(e, id) {
     }
 
     return true;
-}
-
-function updateTitle() {
-    if (originalTitle == "") {
-        originalTitle = document.title;
-    }
-
-    if (!blinkTitle) {
-        document.title = originalTitle;
-        return;
-    }
-
-    if (document.title == originalTitle) {
-        document.title = "(" + newRepliesCount + " new)";
-    } else {
-        document.title = originalTitle;
-    }
-
-    setTimeout(updateTitle, 1000);
-}
-
-function autoRefresh() {
-    $.ajax("../imgboard.php?posts=" + autoRefreshThreadID + "&since=" + autoRefreshPostID)
-        .done(function (d) {
-            try {
-                data = JSON.parse(d);
-            } catch (e) {
-                console.log("Failed to auto-refresh thread: " + e);
-                return;
-            }
-
-            if (Object.keys(data).length == 0) {
-                return
-            }
-
-            posts = $("#posts");
-
-            if (newRepliesNotice.length > 0) {
-                if (!newRepliesNotice.is(":visible")) {
-                    newRepliesNotice.appendTo(posts);
-                    newRepliesNotice.show();
-                }
-            } else {
-                newRepliesNotice = $("<div>", {
-                    "id": "newreplies"
-                });
-                newRepliesNotice.text('New');
-                posts.append(newRepliesNotice);
-            }
-
-            Object.keys(data).forEach(function (key) {
-                posts.append(data[key]);
-
-                setPostAttributes('#post' + key, true);
-
-                autoRefreshPostID = key;
-                newRepliesCount++;
-            });
-
-            if (!document.hasFocus() && !blinkTitle) {
-                blinkTitle = true;
-                updateTitle();
-            }
-        })
-        .fail(function () {
-            console.log("Failed to auto-refresh thread.");
-        })
-        .always(function () {
-            setTimeout(autoRefresh, autoRefreshDelay * 1000);
-        });
 }
 
 window.addEventListener('DOMContentLoaded', function (e) {
@@ -173,32 +92,7 @@ window.addEventListener('DOMContentLoaded', function (e) {
         }
     }
 
-    if (window.location.hash) {
-        if (window.location.hash.match(/^#q[0-9]+$/i) !== null) {
-            var quotePostID = window.location.hash.match(/^#q[0-9]+$/i)[0].substr(2);
-            if (quotePostID != '') {
-                quotePost(quotePostID);
-            }
-        }
-    }
 
-    if (typeof autoRefreshDelay !== 'undefined' && typeof autoRefreshPostID !== 'undefined' && typeof autoRefreshThreadID !== 'undefined') {
-        setTimeout(autoRefresh, autoRefreshDelay * 1000);
-    }
-});
-
-$(window).focus(function () {
-    newRepliesCount = 0;
-    blinkTitle = false;
-});
-
-$(window).blur(function () {
-    if (newRepliesNotice.length == 0) {
-        return;
-    }
-
-    newRepliesCount = 0;
-    newRepliesNotice.hide();
 });
 
 $(document).ready(function () {

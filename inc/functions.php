@@ -512,14 +512,9 @@ function manageLogAction($action) {
 }
 
 function setParent() {
-	if (isset($_POST["parent"])) {
-		if ($_POST["parent"] != TINYIB_NEWTHREAD) {
-			if (!threadExistsByID($_POST['parent'])) {
-				fancyDie(__('Invalid parent thread ID supplied, unable to create post.'));
-			}
-
-			return $_POST["parent"];
-		}
+	// Reject direct requests as well as staff posts; all new posts stand alone.
+	if (isset($_POST['parent']) && (!is_string($_POST['parent']) || $_POST['parent'] !== (string) TINYIB_NEWTHREAD)) {
+		fancyDie(__('Replies are disabled.'));
 	}
 
 	return TINYIB_NEWTHREAD;
