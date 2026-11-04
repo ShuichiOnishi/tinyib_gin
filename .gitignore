@@ -11,3 +11,5 @@ settings.php
 .settings/
 .idea/
 *error_log 
+
+/dist/

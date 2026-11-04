@@ -1,3 +1,19 @@
+# tinyib_gin（PHP 8.5対応版）
+
+添付されたTinyIBを基にした独自改造用のリポジトリです。
+PHP 8.5での投稿処理、翻訳、画像処理、CAPTCHAの警告を修正しています。
+
+既存サイトへの反映には、[投稿を保持する更新手順](docs/UPDATE-PHP85.md)を使用してください。
+`python3 tools/build-update.py` で、設定と投稿データを含まない上書き用ZIPを作成できます。
+`settings.php` と投稿データをGitへ追加しないでください。
+
+検証コマンドは `php tests/php85.php` です。
+PHP 8.5.12でflatfile、SQLite3、MySQLi、PDO/MySQLを検証しました。
+レンタルサーバー本番環境での動作確認は未実施です。
+
+以下は添付版の上流READMEです。
+この派生版の実行条件と更新方法は、上記の更新手順を優先してください。
+
 # TinyIB - Lightweight and efficient [imageboard](https://en.wikipedia.org/wiki/Imageboard)
 [![Translate](https://translate.codeberg.org/widget/tinyib/tinyib/svg-badge.svg)](https://translate.codeberg.org/projects/tinyib/tinyib/)
 [![Donate](https://img.shields.io/liberapay/receives/rocket9labs.com.svg?logo=liberapay)](https://liberapay.com/rocket9labs.com)

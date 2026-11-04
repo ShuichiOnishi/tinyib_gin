@@ -27,7 +27,7 @@ SOFTWARE.
 */
 
 error_reporting(E_ALL);
-ini_set("display_errors", 1);
+// Respect the host's display_errors setting; keep E_ALL in the error log.
 session_start();
 setcookie(session_name(), session_id(), time() + 2592000);
 ob_implicit_flush();
@@ -258,6 +258,15 @@ if (!$loggedin) {
 $redirect = true;
 // Check if the request is to make a post
 if (!isset($_GET['delete']) && !isset($_GET['manage']) && (isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) || isset($_POST['message']) || isset($_POST['file']) || isset($_POST['embed']) || isset($_POST['password']))) {
+	// Optional form fields may be omitted by hidden fields or older clients.
+	foreach (array('name', 'email', 'subject', 'message', 'password') as $field) {
+		if (!isset($_POST[$field])) {
+			$_POST[$field] = '';
+		} else if (!is_string($_POST[$field])) {
+			fancyDie(__('Invalid post supplied.'));
+		}
+	}
+
 	$lock = lockDatabase();
 
 	if (TINYIB_DBMIGRATE) {

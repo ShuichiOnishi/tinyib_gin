@@ -18,7 +18,7 @@ click Rebuild All in the management panel.
 // Internationalization
 define('TINYIB_LOCALE', '');                      // See README for instructions  ['' to run in English]
 define('TINYIB_TIMEZONE', 'UTC');                 // See https://secure.php.net/manual/en/timezones.php - e.g. America/Los_Angeles
-define('TINYIB_DATEFMT', '%g/%m/%d(%a)%H:%M:%S'); // Date and time format  (see php.net/strftime)
+define('TINYIB_DATEFMT', '%g/%m/%d(%a)%H:%M:%S'); // Date and time format  (strftime-style tokens; see docs/UPDATE-PHP85.md)
 
 // Board description and behavior
 //   Warning: Enabling reCAPTCHA will cause all visitors to be tracked by Google.  See https://nearcyan.com/you-probably-dont-need-recaptcha/

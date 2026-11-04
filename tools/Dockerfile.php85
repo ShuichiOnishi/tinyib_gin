@@ -1,0 +1,7 @@
+FROM php:8.5-cli
+RUN --mount=type=secret,id=proxy_ca,required=true \
+    apt-get -o Acquire::https::CaInfo=/run/secrets/proxy_ca update \
+    && apt-get -o Acquire::https::CaInfo=/run/secrets/proxy_ca install -y --no-install-recommends libpng-dev libjpeg62-turbo-dev libfreetype6-dev libicu-dev \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j4 gd intl mysqli pdo_mysql \
+    && rm -rf /var/lib/apt/lists/*

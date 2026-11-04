@@ -69,6 +69,6 @@ class Curl
      */
     public function close($ch)
     {
-        curl_close($ch);
+        // CurlHandle is released automatically when its last reference is removed.
     }
 }

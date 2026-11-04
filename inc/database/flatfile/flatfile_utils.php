@@ -14,6 +14,8 @@ define('DATE_COL', 'date');
 
 /** EXPERIMENTAL: Encapsulates info about a column in a flatfile DB */
 class Column {
+	public $index;
+	public $type;
 	/**
 	 * Create a new column object
 	 */
@@ -31,6 +33,9 @@ class Column {
 
 /** EXPERIMENTAL: Represent a column that is a foreign key.  Used for temporarily building tables array */
 class JoinColumn {
+	public $index;
+	public $tablename;
+	public $columnname;
 	function __construct($index, $tablename, $columnname) {
 		$this->index = $index;
 		$this->tablename = $tablename;

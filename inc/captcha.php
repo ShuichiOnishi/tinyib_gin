@@ -12,7 +12,7 @@
 session_start();
 putenv('GDFONTPATH=' . realpath(dirname(__FILE__)) . '/fonts/');
 
-error_reporting(E_ALL ^ (E_NOTICE | E_WARNING | E_DEPRECATED));
+error_reporting(E_ALL);
 
 $captcha = new SimpleCaptcha();
 $captcha->CreateImage();
@@ -22,6 +22,10 @@ $captcha->CreateImage();
  *
  */
 class SimpleCaptcha {
+	protected $GdBgColor;
+	protected $GdFgColor;
+	protected $GdShadowColor;
+	protected $textFinalX;
 	/** Width of the image */
 	public $width = 175;
 
@@ -157,7 +161,7 @@ class SimpleCaptcha {
 	protected function ImageAllocate() {
 		// Cleanup
 		if (!empty($this->im)) {
-			imagedestroy($this->im);
+			$this->im = null;
 		}
 
 		$this->im = imagecreatetruecolor($this->width * $this->scale, $this->height * $this->scale);
@@ -250,7 +254,7 @@ class SimpleCaptcha {
 		if (!$length) {
 			return false;
 		}
-		$line = rand(1, (filesize($wordsfile) / $length) - 2);
+		$line = rand(1, max(1, intdiv(filesize($wordsfile), $length) - 2));
 		if (fseek($fp, $length * $line) == -1) {
 			return false;
 		}
@@ -276,14 +280,14 @@ class SimpleCaptcha {
 	 * Horizontal line insertion
 	 */
 	protected function WriteLine() {
-		$x1 = $this->width * $this->scale * .15;
+		$x1 = (int) round($this->width * $this->scale * .15);
 		$x2 = $this->textFinalX;
-		$y1 = rand($this->height * $this->scale * .40, $this->height * $this->scale * .65);
-		$y2 = rand($this->height * $this->scale * .40, $this->height * $this->scale * .65);
+		$y1 = rand((int) ($this->height * $this->scale * .40), (int) ($this->height * $this->scale * .65));
+		$y2 = rand((int) ($this->height * $this->scale * .40), (int) ($this->height * $this->scale * .65));
 		$width = $this->lineWidth / 2 * $this->scale;
 
 		for ($i = $width * -1; $i <= $width; $i++) {
-			imageline($this->im, $x1, $y1 + $i, $x2, $y2 + $i, $this->GdFgColor);
+			imageline($this->im, (int) $x1, (int) round($y1 + $i), (int) $x2, (int) round($y2 + $i), $this->GdFgColor);
 		}
 	}
 
@@ -334,7 +338,7 @@ class SimpleCaptcha {
 		$k = rand(0, 100);
 		for ($i = 0; $i < ($this->width * $this->scale); $i++) {
 			imagecopy($this->im, $this->im,
-				$i - 1, sin($k + $i / $xp) * ($this->scale * $this->Xamplitude),
+				$i - 1, (int) round(sin($k + $i / $xp) * ($this->scale * $this->Xamplitude)),
 				$i, 0, 1, $this->height * $this->scale);
 		}
 
@@ -343,7 +347,7 @@ class SimpleCaptcha {
 		$yp = $this->scale * $this->Yperiod * rand(1, 2);
 		for ($i = 0; $i < ($this->height * $this->scale); $i++) {
 			imagecopy($this->im, $this->im,
-				sin($k + $i / $yp) * ($this->scale * $this->Yamplitude), $i - 1,
+				(int) round(sin($k + $i / $yp) * ($this->scale * $this->Yamplitude)), $i - 1,
 				0, $i, $this->width * $this->scale, 1);
 		}
 	}
@@ -359,7 +363,7 @@ class SimpleCaptcha {
 			$this->width, $this->height,
 			$this->width * $this->scale, $this->height * $this->scale
 		);
-		imagedestroy($this->im);
+		$this->im = null;
 		$this->im = $imResampled;
 	}
 
@@ -384,6 +388,6 @@ class SimpleCaptcha {
 	 * Cleanup
 	 */
 	protected function Cleanup() {
-		imagedestroy($this->im);
+		$this->im = null;
 	}
 }

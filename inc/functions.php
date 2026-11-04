@@ -3,6 +3,8 @@ if (!defined('TINYIB_BOARD')) {
 	die('');
 }
 
+require_once __DIR__ . '/dateformat.php';
+
 $multibyte_enabled = function_exists('mb_strlen');
 
 if (!function_exists('array_column')) {
@@ -699,8 +701,8 @@ function createThumbnail($file_location, $thumb_location, $new_w, $new_h, $spoil
 			}
 		}
 
-		imagedestroy($dst_img);
-		imagedestroy($src_img);
+		$dst_img = null;
+		$src_img = null;
 	} else if (TINYIB_THUMBNAIL == 'ffmpeg') {
 		ffmpegThumbnail($file_location, $thumb_location, $new_w, $new_h);
 	} else { // ImageMagick
@@ -756,7 +758,7 @@ function createThumbnail($file_location, $thumb_location, $new_w, $new_h, $spoil
 			return false;
 		}
 	}
-	imagedestroy($src_img);
+	$src_img = null;
 	return true;
 }
 
@@ -771,7 +773,7 @@ function fastimagecopyresampled(&$dst_image, &$src_image, $dst_x, $dst_y, $src_x
 
 		imagecopyresized($temp, $src_image, $dst_x, $dst_y, $src_x, $src_y, $dst_w + 1, $dst_h + 1, $src_w, $src_h);
 		imagecopyresized($dst_image, $temp, 0, 0, 0, 0, $dst_w, $dst_h, $dst_w, $dst_h);
-		imagedestroy($temp);
+		$temp = null;
 	} elseif ($quality < 5 && (($dst_w * $quality) < $src_w || ($dst_h * $quality) < $src_h)) {
 		$tmp_w = $dst_w * $quality;
 		$tmp_h = $dst_h * $quality;
@@ -779,7 +781,7 @@ function fastimagecopyresampled(&$dst_image, &$src_image, $dst_x, $dst_y, $src_x
 
 		imagecopyresized($temp, $src_image, $dst_x * $quality, $dst_y * $quality, $src_x, $src_y, $tmp_w + 1, $tmp_h + 1, $src_w, $src_h);
 		imagecopyresampled($dst_image, $temp, 0, 0, 0, 0, $dst_w, $dst_h, $tmp_w, $tmp_h);
-		imagedestroy($temp);
+		$temp = null;
 	} else {
 		imagecopyresampled($dst_image, $src_image, $dst_x, $dst_y, $src_x, $src_y, $dst_w, $dst_h, $src_w, $src_h);
 	}
@@ -853,7 +855,7 @@ function url_get_contents($url) {
 	$output = curl_exec($ch);
 	$responsecode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-	curl_close($ch);
+	unset($ch);
 
 	if (intval($responsecode) != 200) {
 		return '';
@@ -1023,7 +1025,7 @@ function stripMetadata($filename) {
 }
 
 function formatDate($timestamp) {
-	return @strftime(TINYIB_DATEFMT, $timestamp);
+	return tinyibFormatDate(TINYIB_DATEFMT, $timestamp);
 }
 
 function remoteAddress() {
