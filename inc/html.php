@@ -113,22 +113,10 @@ function buildPostForm($parent, $staff_post = false) {
 	if ($parent != TINYIB_NEWTHREAD) {
 		return '';
 	}
-	global $tinyib_hidefieldsop, $tinyib_hidefields, $tinyib_uploads, $tinyib_embeds;
+	global $tinyib_hidefieldsop, $tinyib_hidefields, $tinyib_uploads;
 	$hide_fields = $parent == TINYIB_NEWTHREAD ? $tinyib_hidefieldsop : $tinyib_hidefields;
 
-	$postform_extra = array('name' => '', 'email' => '', 'subject' => '', 'footer' => '');
 	$input_submit = '<input type="submit" value="' . __('Submit') . '" accesskey="z">';
-	if ($staff_post || !in_array('subject', $hide_fields)) {
-		$postform_extra['subject'] = $input_submit;
-	} else if (!in_array('email', $hide_fields)) {
-		$postform_extra['email'] = $input_submit;
-	} else if (!in_array('name', $hide_fields)) {
-		$postform_extra['name'] = $input_submit;
-	} else if (!in_array('email', $hide_fields)) {
-		$postform_extra['email'] = $input_submit;
-	} else {
-		$postform_extra['footer'] = $input_submit;
-	}
 
 	$form_action = 'imgboard.php';
 	$form_extra = '<input type="hidden" name="parent" value="' . $parent . '">';
@@ -136,14 +124,10 @@ function buildPostForm($parent, $staff_post = false) {
 	$rules_extra = '';
 
 	$maxlen_name = -1;
-	$maxlen_email = -1;
 	$maxlen_subject = -1;
 	$maxlen_message = -1;
 	if (TINYIB_MAXNAME > 0) {
 		$maxlen_name = TINYIB_MAXNAME;
-	}
-	if (TINYIB_MAXEMAIL > 0) {
-		$maxlen_email = TINYIB_MAXEMAIL;
 	}
 	if (TINYIB_MAXSUBJECT > 0) {
 		$maxlen_subject = TINYIB_MAXSUBJECT;
@@ -174,7 +158,6 @@ function buildPostForm($parent, $staff_post = false) {
 EOF;
 
 		$maxlen_name = -1;
-		$maxlen_email = -1;
 		$maxlen_subject = -1;
 		$maxlen_message = -1;
 	}
@@ -184,7 +167,6 @@ EOF;
 	$reqmod_html = '';
 	$filetypes_html = '';
 	$file_input_html = '';
-	$embed_input_html = '';
 	$unique_posts_html = '';
 
 	$captcha_setting = $parent == TINYIB_NEWTHREAD ? TINYIB_CAPTCHA : TINYIB_REPLYCAPTCHA;
@@ -258,25 +240,6 @@ EOF;
 EOF;
 	}
 
-	$embeds_enabled = (!empty($tinyib_embeds) || TINYIB_UPLOADVIAURL) && ($staff_post || !in_array('embed', $hide_fields));
-	if ($embeds_enabled) {
-		$txt_embed = __('Embed');
-		$txt_embed_help = '';
-		if ($embeds_enabled) {
-			$txt_embed_help = __('(paste a YouTube URL)');
-		}
-		$embed_input_html = <<<EOF
-					<tr>
-						<td class="postblock">
-							$txt_embed
-						</td>
-						<td>
-							<input type="text" name="embed" size="28" accesskey="x" autocomplete="off">&nbsp;&nbsp;$txt_embed_help
-						</td>
-					</tr>
-EOF;
-	}
-
 	if (TINYIB_REQMOD == 'all') {
 		$reqmod_html = '<li>' . __('All posts are moderated before being shown.') . '</li>';
 	} else if (TINYIB_REQMOD == 'files') {
@@ -313,21 +276,6 @@ EOF;
 						</td>
 						<td>
 							<input type="text" name="name" size="28" maxlength="{$maxlen_name}" accesskey="n">
-							{$postform_extra['name']}
-						</td>
-					</tr>
-EOF;
-	}
-	if ($staff_post || !in_array('email', $hide_fields)) {
-		$txt_email = __('E-mail');
-		$output .= <<<EOF
-					<tr>
-						<td class="postblock">
-							$txt_email
-						</td>
-						<td>
-							<input type="text" name="email" size="28" maxlength="{$maxlen_email}" accesskey="e">
-							{$postform_extra['email']}
 						</td>
 					</tr>
 EOF;
@@ -341,7 +289,6 @@ EOF;
 						</td>
 						<td>
 							<input type="text" name="subject" size="40" maxlength="{$maxlen_subject}" accesskey="s" autocomplete="off">
-							{$postform_extra['subject']}
 						</td>
 					</tr>
 EOF;
@@ -363,7 +310,6 @@ EOF;
 	$output .= <<<EOF
 					$captcha_html
 					$file_input_html
-					$embed_input_html
 EOF;
 	if ($staff_post || !in_array('password', $hide_fields)) {
 		$txt_password = __('Password');
@@ -379,19 +325,15 @@ EOF;
 					</tr>
 EOF;
 	}
-	if ($postform_extra['footer'] != '') {
-		$output .= <<<EOF
+	$output .= <<<EOF
 					<tr>
 						<td>
 							&nbsp;
 						</td>
 						<td>
-							{$postform_extra['footer']}
+							$input_submit
 						</td>
 					</tr>
-EOF;
-	}
-	$output .= <<<EOF
 					<tr>
 						<td colspan="2" class="rules">
 							$rules_extra
